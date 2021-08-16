@@ -1,0 +1,41 @@
+<div class="row mt-5">
+    <div class="col-md-3 col-sm-12 mb-4">
+
+    </div>
+    <div class="col-md-6 col-sm-12 mt-5 box mb-4">
+        <h1 class="mb-5 text-center">5. Loan Details</h1>
+        <form>
+            <div class="row ">
+                <div class="col-4 mb-3">
+                    <label for="expectedAmount">Expected Amount</label>
+                </div>
+                <div class="col-8 mb-3">
+                    <input type="text" class="form-control" name="expectedAmount" id="expectedAmount" [(ngModel)] = "application.expectedAmount" maxlength="10" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
+                </div>
+                <div class="col-4 mb-3">
+                    <label for="interest-rate">Interest Rate</label>
+                </div>
+                <div class="col-8 mb-3">
+                    
+                    <input type="text" id="disabledTextInput" class="form-control" placeholder="8.5%" disabled readonly>
+                </div>
+                
+
+                <div class="col-4 mb-3">
+                    <label for="tenure">Tenure (In years)</label>
+                </div>
+                
+                <div class="col-8 mb-3">
+                    <input type="text" class="form-control" name="tenure" id="tenure"  [(ngModel)] = "application.tenure" maxlength="2" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
+                </div>
+                <div class="col-12 mb-3 text-center">
+                    <button class="btn btn-secondary mr-3" (click)="back()">Back</button>
+                    <button class="btn btn-primary" (click)="clicked()">Next</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="col-md-3 col-sm-12 mt-5 mb-4 ">
+
+    </div>
+</div>

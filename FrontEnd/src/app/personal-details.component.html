@@ -1,0 +1,92 @@
+<div class="row mt-5">
+    <div class="col-md-3 col-sm-12 mb-4 ">
+
+    </div>
+    <div class="col-md-6 col-sm-12 mt-5 box mb-4">
+        <h1 class="mb-5 text-center">1. Personal Details</h1>
+        <form>
+            <div class="row ">
+                <div class="col-4 mb-3">
+                    <label for="title">Title</label>
+                </div>
+                <div class="col-8 mb-3">
+                    <input type="text" class="form-control"  name="title" id="title"  [(ngModel)]="customer.title"  maxlength="10" oninput="this.value = this.value.replace(/[0-9.]/g,'')">
+                </div>
+                <div class="col-4 mb-3">
+                    <label for="first-name">First Name</label>
+                </div>
+                <div class="col-8 mb-3">
+                    <input type="text" class="form-control" name="first-name" id="first-name"  [(ngModel)]="customer.firstName"  maxlength="20" oninput="this.value = this.value.replace(/[0-9.]/g,'')">
+                </div>
+                <div class="col-4 mb-3">
+                    <label for="middle-name">Middle Name</label>
+                </div>
+                <div class="col-8 mb-3">
+                    <input type="text" class="form-control" name="middle-name" id="middle-name"  [(ngModel)]="customer.middleName" maxlength="15" oninput="this.value = this.value.replace(/[0-9.]/g,'')">
+                </div>
+                <div class="col-4 mb-3">
+                    <label for="last-name">Last Name</label>
+                </div>
+                <div class="col-8 mb-3">
+                    <input type="text" class="form-control" name="last-name" id="last-name"  [(ngModel)]="customer.lastName" maxlength="15" oninput="this.value = this.value.replace(/[0-9.]/g,'')">
+                </div>
+                <div class="col-4 mb-3">
+                    <label for="email">Email</label>
+                </div>
+                <div class="col-8 mb-3">
+                    <input type="email" class="form-control" name="email" id="email"  [(ngModel)]="customer.emailId" maxlength="20">
+                </div>
+                <div class="col-4 mb-3">
+                    <label for="password">Password</label>
+                </div>
+                <div class="col-8 mb-3">
+                    <input type="password" class="form-control" name="password" id="password"  [(ngModel)]="customer.password" placeholder="Maxlength 15 characters" maxlength="15">
+                </div>
+                <div class="col-4 mb-3">
+                    <label for="confirm-password">Confirm Password</label>
+                </div>
+                <div class="col-8 mb-3">
+                    <input type="password" class="form-control" name="confirm-password" id="confirm-password" [(ngModel)]="confirmPassword" placeholder="Maxlength 15 characters" maxlength="15" >
+                </div>
+                <div class="col-4 mb-3">
+                    <label for="phone">Phone Number</label>
+                </div>
+                <div class="col-8 mb-3">
+                    <input type="text"  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"  class="form-control" name="phone" id="phone"  [(ngModel)]="customer.phoneNumber" maxlength="10">
+                </div>
+                <div class="col-4 mb-3">
+                    <label for="dob">Date of Birth</label>
+                </div>
+                <div class="col-8 mb-3">
+                    <input type="date" class="form-control" name="dob" id="dob"  [(ngModel)]="customer.dateOfBirth">
+                </div>
+                <div class="col-4 mb-3">
+                    <label for="gender">Gender</label>
+                </div>
+                <div class="col-8 mb-3">           
+                    <span class="mr-3"><input type="radio" class="mr-1" value="male" name="gender" [(ngModel)]="customer.gender" required #genderControl="ngModel"> Male</span>
+                    <span class="mr-3"><input type="radio" class="mr-1" value="female" name="gender" [(ngModel)]="customer.gender" required> Female</span>
+                    <span class="mr-3"><input type="radio" class="mr-1" name="gender" id="gender" [(ngModel)]="customer.gender" required>Others</span>
+                </div>
+                <div class="col-4 mb-3">
+                    <label for="aadharNo">Aadhar Number</label>
+                </div>
+                <div class="col-8 mb-3">
+                    <input type="text" class="form-control"  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"  name="aadharNo" id="aadharNo" [(ngModel)]="customer.aadharNumber" maxlength="12">
+                </div>
+                <div class="col-4 mb-3">
+                    <label for="panNo">Pan Number</label>
+                </div>
+                <div class="col-8 mb-3">
+                    <input type="text" class="form-control" name="panNo" id="panNo"  [(ngModel)]="customer.panNumber"  maxlength="10">
+                </div>
+                <div class="col-12 mb-3 text-center">
+                    <button class="btn btn-primary" type="button" (click)="clicked()">Next</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="col-md-3 col-sm-12 mb-4">
+
+    </div>
+</div>

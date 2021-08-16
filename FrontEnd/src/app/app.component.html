@@ -1,0 +1,72 @@
+<div class="wrapper">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <div class="row width-100">
+                <div class="col-md-4 col-sm-12">
+                    <a class="navbar-brand" href="#">
+                        <img class="logo-image" src="assets/LTI_Lets_solve.png" alt="LTI_logo">
+                    </a>
+                </div>
+                <div class="col-md-8 col-sm-12">
+                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0 pad-5">
+                        <li class="nav-item">
+                            <a [routerLink]="['/']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a [routerLink]="['/about-us']" routerLinkActive="active" class="nav-link" href="#">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a [routerLink]="['/calculator']" routerLinkActive="active" class="nav-link" href="#">Calculator</a>
+                        </li>
+                        <li class="nav-item">
+                            <a [routerLink]="['/application']" routerLinkActive="active" class="nav-link" href="#">Application</a>
+                        </li>
+                        <li class="nav-item">
+                            <a [routerLink]="['/login']" routerLinkActive="active" class="nav-link" href="#">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a [routerLink]="['/loan-tracker']" routerLinkActive="active" class="nav-link" href="#">Loan Tracker</a>
+                        </li>
+                        <li class="nav-item">
+                            <a [routerLink]="['/your-account']" routerLinkActive="active" class="nav-link" href="#">Your Account</a>
+                        </li>
+                        <li class="nav-item">
+                            <a [routerLink]="['/faq']" routerLinkActive="active" class="nav-link" href="#">FAQ</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="row margin-zero">
+        <div class="col-12 mt-80 for-content">
+            <router-outlet></router-outlet>
+        </div>
+        <div class="col-12 mt-5 footer">
+            <div class="container-fluid padding-15">
+                <div class="row ">
+                    <div class="col-md-3">
+                        <a class="navbar-brand padding-0" href="#">
+                            <img class="logo-image" src="assets/LTI_Lets_solve.png" alt="LTI_logo">
+                        </a>
+                    </div>
+                    <div class="col-md-2 col-sm-12 text-center padding-10">
+                        <a class="btn-link " (click)="features()">Features</a>
+                    </div>
+                    <div class="col-md-2 col-sm-12 text-center padding-10">
+                        <a class="btn-link " (click)="calculator()">Calculator</a>
+                    </div>
+                    <div class="col-md-2 col-sm-12 text-center padding-10">
+                        <a class="btn-link " (click)="documents()">Documents</a>
+                    </div>
+                    <div class="col-md-3 padding-10">
+                        <u><a class="btn-link support-link" (click)="calculator()">lti.support@gmail.co.in</a></u>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

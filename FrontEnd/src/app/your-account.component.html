@@ -1,0 +1,26 @@
+<div class="row mt-5">
+    <div class="col-md-3 col-sm-12 mt-5 mb-4"></div>
+    <div class="col-md-6 col-sm-12 mt-5 box mb-4">
+        <h1 class="mb-5 text-center">Your Account</h1>
+        <form>
+            <div class="row ">
+                <div class="col-4 mb-3">
+                    <label for="acc-number">Account Number  </label>
+                </div>
+                <div class="col-8 mb-3">
+                    <input type="text" [(ngModel)]="balance" class="form-control" name="acc-number" id="acc-number">
+                </div>
+                <div class="col-4 mb-3">
+                    <label for="balance">Balance</label>
+                </div>
+                <div class="col-8 mb-3">
+                    <input type="text" [(ngModel)]="availableBalance" readonly class="form-control" name="balance" id="balance">
+                </div>
+                <div class="col-12 mb-3 text-center">
+                    <button class="btn btn-primary" (click)="check($event)">Check</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="col-md-3 col-sm-12 mt-5 mb-4"></div>
+</div>

@@ -1,0 +1,221 @@
+<div *ngIf = "allDetails && allDetails.length" >
+<!-- 
+    <div class="col-2 "  style="margin-top: 100px;">
+        <button class="btn btn-danger pull-right shiftRight" (click)="logout()">Logout</button>
+
+    </div> -->
+
+    <div class="row" style="margin-top: 100px;">
+        <div class="col-2"></div>
+        <div class="col-8">
+           
+        </div>
+        <div class="col-2">
+            <button class="btn btn-danger pull-right" (click)="logout()">Logout</button>
+        </div>
+    </div>
+ 
+    
+      <div class = "mt-5 mb-4">
+          <label for="first-name" class = "pr-2"><h5>Search</h5></label> 
+          <input type="text" placeholder ="search by customer Id" name = e1 [(ngModel)] = "custId" (ngModelChange)="updateAllDetailsArray()">
+       </div>
+  <h1 class="mb-5 mt-5 text-center">Welcome To Admin Dashboard</h1>
+<div class="row mt-5" *ngFor = "let details of tempAllDetails">
+  <div class="col-md-3 col-sm-12 mb-4 ">
+
+  </div>
+  <div class="col-md-6 col-sm-12 mt-5 box mb-4">
+      
+      <form>
+          <div class="row ">
+             
+              <div class="col-4 mb-3">
+                  <label for="first-name">Customer Id</label>
+              </div>
+              <div class="col-8 mb-3">
+                  <input type="text" class="form-control"  placeholder={{details.customer.custId}} disabled readonly>
+              </div>
+             <div class="col-4 mb-3">
+                  <label for="first-name">First Name</label>
+              </div>
+              <div class="col-8 mb-3">
+                  <input type="text" class="form-control"  placeholder={{details.customer.firstName}} disabled readonly>
+              </div>
+              
+              <div class="col-4 mb-3">
+                  <label for="last-name">Last Name</label>
+              </div>
+              <div class="col-8 mb-3">
+                  <input type="text" class="form-control" name="last-name" id="last-name"  placeholder={{details.customer.lastName}} disabled readonly>
+              </div>
+              <div class="col-4 mb-3">
+                  <label for="email">Email</label>
+              </div>
+              <div class="col-8 mb-3">
+                  <input type="text" class="form-control" name="email" id="email"  placeholder={{details.customer.emailId}} disabled readonly>
+              </div>
+              
+              <div class="col-4 mb-3">
+                  <label for="aadharNo">Aadhar Number</label>
+              </div>
+              <div class="col-8 mb-3">
+                  <input type="text" class="form-control" name="aadharNo" id="aadharNo" placeholder={{details.customer.aadharNumber}} disabled readonly>
+              </div>
+              <div class="col-4 mb-3">
+                  <label for="panNo">Pan Number</label>
+              </div>
+              <div class="col-8 mb-3">
+                  <input type="text" class="form-control" name="panNo" id="panNo" placeholder={{details.customer.panNumber}} disabled readonly>
+              </div>
+              
+             
+             <div class="col-4 mb-3">
+              <label for="address">Address</label>
+          </div>
+          <div class="col-8 mb-3">
+              <input type="text" class="form-control" name="address" id="address" placeholder={{details.address.address}} disabled readonly>
+          </div>
+          <div class="col-4 mb-3">
+              <label for="pincode">Pincode</label>
+          </div>
+          <div class="col-8 mb-3">
+              <input type="text" class="form-control" name="pincode" id="pincode" placeholder={{details.address.pinCode}} disabled readonly>
+          </div>
+          <div class="col-4 mb-3">
+              <label for="city">City</label>
+          </div>
+          <div class="col-8 mb-3">
+              <input type="text" class="form-control" name="city" id="city" placeholder={{details.address.city}} disabled readonly>
+          </div>
+          <div class="col-4 mb-3">
+              <label for="state">State</label>
+          </div>
+          <div class="col-8 mb-3">
+              <input type="text" class="form-control" name="state" id="state" placeholder={{details.address.state}} disabled readonly>
+          </div>
+          <div class="col-4 mb-3">
+              <label for="organizaton-type">Organization Type</label>
+          </div>
+          <div class="col-8 mb-3">
+              <input type="text" class="form-control" name="organizaton-type" id="organizaton-type" placeholder={{details.employment.typeOfEmployement}} disabled readonly>
+          </div>
+          <div class="col-4 mb-3">
+              <label for="retirement-range">Retirement age</label>
+          </div>
+          <div class="col-8 mb-3">
+              <input type="text" class="form-control" name="retirement-range" id="retirement-range" placeholder={{details.employment.retirementAge}} disabled readonly>
+          </div>
+          
+          <div class="col-4 mb-3">
+              <label for="employer-name">Employer Name</label>
+          </div>
+          <div class="col-8 mb-3">
+              <input type="text" class="form-control" name="employer-name" id="employer-name" placeholder={{details.employment.employerName}} disabled readonly>
+          </div>
+          
+          <div class="col-4 mb-3">
+              <label for="netmonthlyincome">Net Monthly Income</label>
+          </div>
+          <div class="col-8 mb-3">
+              <input type="text" class="form-control" name="netmonthlyincome" id="netmonthlyincome" placeholder={{details.employment.netMonthlyIncome}} disabled readonly>
+          </div>
+          <div class="col-4 mb-3">
+              <label for="expectedAmount">Expected Amount</label>
+          </div>
+          <div class="col-8 mb-3">
+              <input type="text" class="form-control" name="expectedAmount" id="expectedAmount" placeholder={{details.application.expectedAmount}} disabled readonly>
+          </div>
+         <div class="col-4 mb-3">
+              <label for="tenure">Tenure</label>
+          </div>
+           <div class="col-8 mb-3">
+              <input type="text" class="form-control" name="tenure" id="tenure"  placeholder={{details.application.tenure}} disabled readonly>
+          </div>
+
+          <div class="col-4 mb-3">
+              <label for="property-location">Property Location</label>
+          </div>
+          <div class="col-8 mb-3">
+              <input type="text" class="form-control" name="property-location" id="property-location" placeholder={{details.property.propertyLocation}} disabled readonly>
+          </div>
+          <div class="col-4 mb-3">
+              <label for="property-name">Property Name</label>
+          </div>
+          <div class="col-8 mb-3">
+              <input type="text" class="form-control" name="property-name" id="property-name" placeholder={{details.property.propertyName}} disabled readonly>
+          </div>
+          <div class="col-4 mb-3">
+              <label for="estimate-amount">Estimated Amount</label>
+          </div>
+          <div class="col-8 mb-3">
+              <input type="text" class="form-control" name="estimate-amount" id="estimate-amount" placeholder={{details.property.cost}} disabled readonly>
+          </div>
+          <!------document section   ----->
+          <div class="col-4 mb-3">
+            <label for="photograph">PhotoGraph</label>
+        </div>
+        <div class="col-8 mb-3">
+           <a href="{{details.document.photograph}}">Photograph</a>
+        </div>
+        <div class="col-4 mb-3">
+            <label for="aadharCard">Aadhar Card</label>
+        </div>
+        <div class="col-8 mb-3">
+            <a href="{{details.document.aadharCard}}">AadharCard</a>
+        </div>
+        <div class="col-4 mb-3">
+            <label for="signature">signature</label>
+        </div>
+        <div class="col-8 mb-3">
+            <a href="{{details.document.signature}}">signature</a>
+        </div>
+
+        <div class="col-4 mb-3">
+            <label for="pancard">PanCard</label>
+        </div>
+        <div class="col-8 mb-3">
+            <a href="{{details.document.panCard}}">PanCard</a>
+        </div>
+        <div class="col-4 mb-3">
+            <label for="salarySlip">SalarySlip</label>
+        </div>
+        <div class="col-8 mb-3">
+            <a href="{{details.document.salarySlip}}">SalarySlip</a>
+        </div>
+        <div class="col-4 mb-3">
+            <label for="loa">LOA</label>
+        </div>
+        <div class="col-8 mb-3">
+            <a href="{{details.document.loa}}">LOA</a>
+        </div>
+        <div class="col-4 mb-3">
+            <label for="itrc">ITRC</label>
+        </div>
+        <div class="col-8 mb-3">
+            <a href="{{details.document.itrc}}">ITRC</a>
+        </div>
+        <div class="col-4 mb-3">
+            <label for="noc">NOC</label>
+        </div>
+        <div class="col-8 mb-3">
+            <a href="{{details.document.noc}}">NOC</a>
+        </div>
+        <div class="col-4 mb-3">
+            <label for="agreementToSale">Agreement To Sale</label>
+        </div>
+        <div class="col-8 mb-3">
+            <a href="{{details.document.agreementToSale}}">Agreement To Sale</a>
+        </div>
+     <!------Document section ends-->
+          <div class="col-12 mb-3 text-center">
+              <button class="btn btn-danger mr-3" type = "button" (click)="delete(details.customer.custId)">Delete</button>
+              <button class="btn btn-primary mr-3" type = "button" (click)="reject(details.customer.custId)">Reject</button>
+              <button class="btn btn-success" type="button" (click)="approve(details.customer.custId)">Approve</button>
+          </div>
+          </div>
+      </form>
+  </div>
+
+</div>
+</div>

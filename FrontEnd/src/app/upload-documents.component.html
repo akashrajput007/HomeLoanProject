@@ -1,0 +1,88 @@
+<div class="row mt-5">
+    <div class="col-md-3 col-sm-12 mb-4 ">
+
+    </div>
+    <div class="col-md-6 col-sm-12 mt-5 box mb-4">
+        <h1 class="mb-5 text-center">7. Upload Documents</h1>
+        <form>
+            <div class="row ">
+                <div class="col-4 mb-3">
+                    <label for="photograph">Photograph</label>
+                </div>
+                <div class="col-8 mb-3">
+                    <input type="file"  class="form-control" accept="image/jpeg,image/png,application/pdf" name="photograph" id="photograph"   (change)="onChange($event)">
+                    <!-- <input type="button" (click)="onUpload()" value="upload"> -->
+                </div>
+                <div class="col-4 mb-3">
+                    <label for="signature">Signature</label>
+                </div>
+                <div class="col-8 mb-3">
+                    <input type="file"  class="form-control" accept="image/jpeg,image/png,application/pdf" name="signature" id="signature"   (change)="onChange($event)">
+                </div>
+                <div class="col-4 mb-3">
+                    <label for="aadhar-card">Aadhar Card</label>
+                </div>
+                <div class="col-8 mb-3">
+                    <input type="file"  class="form-control" accept="image/jpeg,image/png,application/pdf" name="aadhar-card" id="aadhar-card"   (change)="onChange($event)">
+                </div>
+                <div class="col-4 mb-3">
+                    <label for="pan-card">Pan Card</label>
+                </div>
+                <div class="col-8 mb-3">
+                    <input type="file"  class="form-control" accept="image/jpeg,image/png,application/pdf" name="pan-card" id="pan-card"   (change)="onChange($event)">
+                </div>
+                <div class="col-4 mb-3">
+                    <label for="voter-id">Voter id</label>
+                </div>
+                <div class="col-8 mb-3">
+                    <input type="file" class="form-control" accept="image/jpeg,image/png,application/pdf" name="voter-id" id="voter-id" (change)="onChange($event)">
+                </div>
+                <div class="col-4 mb-3">
+                    <label for="bank-statement">Bank Statement (Last 6 months)</label>
+                </div>
+                <div class="col-8 mb-3">
+                    <input type="file" class="form-control" accept="image/jpeg,image/png,application/pdf" name="bank-statement" id="bank-statement" (change)="onChange($event)">
+                </div>
+                <div class="col-4 mb-3">
+                    <label for="salary">Salary Slip</label>
+                </div>
+                <div class="col-8 mb-3">
+                    <input type="file" class="form-control" accept="image/jpeg,image/png,application/pdf" name="salary"  id="salary" (change)="onChange($event)">
+                </div>
+                <div class="col-4 mb-3">
+                    <label for="loa">LOA</label>
+                </div>
+                <div class="col-8 mb-3">
+                    <input type="file" class="form-control" accept="image/jpeg,image/png,application/pdf" name="loa" id="loa" (change)="onChange($event)">
+                </div>
+
+                <div class="col-4 mb-3">
+                    <label for="itrc">ITRC</label>
+                </div>
+                <div class="col-8 mb-3">
+                    <input type="file" class="form-control" accept="image/jpeg,image/png,application/pdf" name="itrc" id="itrc" (change)="onChange($event)">
+                </div>
+
+                <div class="col-4 mb-3">
+                    <label for="noc">NOC from Builder</label>
+                </div>
+                <div class="col-8 mb-3">
+                    <input type="file" class="form-control" accept="image/jpeg,image/png,application/pdf" name="noc" id="noc" (change)="onChange($event)">
+                </div>
+                <div class="col-4 mb-3">
+                    <label for="agreementToSale">Agreement To Sale</label>
+                </div>
+                <div class="col-8 mb-3">
+                    <input type="file" class="form-control" accept="image/jpeg,image/png,application/pdf" name="agreementToSale" id="agreementToSale" (change)="onChange($event)">
+                </div>
+                <div class="col-12 mb-3 text-center">
+                    <button class="btn btn-secondary mr-3" (click)="back()">Back</button>
+                    <button class="btn btn-primary" (click)="clicked()">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="col-md-3 col-sm-12 mb-4 ">
+
+    </div>
+</div>

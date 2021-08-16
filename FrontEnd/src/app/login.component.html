@@ -1,0 +1,107 @@
+<!-- <div class="row mt-5">
+    <div class="col-md-3 col-sm-12"></div>
+    <div class="col-md-6 col-sm-12 mt-5 box mb-4">
+        <form *ngIf="isUser">
+            <h1 class="mb-5 text-center">Admin Login</h1>
+            <div class="row ">
+                <div class="col-4 mb-3">
+                    <label for="username">Username</label>
+                </div>
+                <div class="col-8 mb-3">
+                    <input type="text" class="form-control" name="username" id="username">
+                </div>
+                <div class="col-4 mb-3">
+                    <label for="admin-password">Password</label>
+                </div>
+                <div class="col-8 mb-3">
+                    <input type="password" class="form-control" name="admin-password" id="admin-password">
+                </div>
+                <div class="col-12 mb-3 text-center">
+                    <button class="btn btn-secondary mr-3" (click)="forgotAdmin($event)">Forgot Password</button>
+                    <button class="btn btn-primary" (click)="saveAdmin($event)">Login</button>
+                </div>
+                <div class="col-12">
+                    <p class="link" (click)="user()"><u>If you are User?</u></p>
+                </div>
+            </div>
+        </form>
+        <form *ngIf="!isUser">
+            <h1 class="mb-5 text-center">User Login</h1>
+            <div class="row ">
+                <div class="col-4 mb-3">
+                    <label for="email">Email ID</label>
+                </div>
+                <div class="col-8 mb-3">
+                    <input type="text" [(ngModel)]="userDetails.emailId" class="form-control" name="email" id="email">
+                </div>
+                <div class="col-4 mb-3">
+                    <label for="password">Password</label>
+                </div>
+                <div class="col-8 mb-3">
+                    <input type="password" [(ngModel)]="userDetails.password" class="form-control" name="password" id="password">
+                </div>
+                <div class="col-12 mb-3 text-center">
+                    <button class="btn btn-secondary mr-3" (click)="forgot($event)">Forgot Password</button>
+                    <button class="btn btn-primary" (click)="save($event)">Submit</button>
+                </div>
+                <div class="col-12">
+                    <p class="link" (click)="admin()"><u>If you are Admin?</u></p>
+                </div>
+            </div>
+        </form>
+    </div>
+</div> -->
+
+<div class="row mt-5">
+    <div class="col-md-3 col-sm-12"></div>
+    <div class="col-md-6 col-sm-12 mt-5 box mb-4">
+        <form *ngIf="isUser">
+            <h1 class="mb-5 text-center">Admin Login</h1>
+            <div class="row ">
+                <div class="col-4 mb-3">
+                    <label for="username">Username</label>
+                </div>
+                <div class="col-8 mb-3">
+                    <input type="text" class="form-control" name="username" id="username" [(ngModel)] = "username">
+                </div>
+                <div class="col-4 mb-3">
+                    <label for="admin-password">Password</label>
+                </div>
+                <div class="col-8 mb-3">
+                    <input type="password" class="form-control" name="admin-password" id="admin-password" [(ngModel)] = "password">
+                </div>
+                <div class="col-12 mb-3 text-center">
+                    <button class="btn btn-secondary mr-3" (click)="forgotAdmin($event)">Forgot Password</button>
+                    <button class="btn btn-primary" (click)="AdminValidation(username,password)">Login</button>
+                </div>
+                <div class="col-12">
+                    <p class="link" (click)="user()"><u>If you are User?</u></p>
+                </div>
+            </div>
+        </form>
+        <form *ngIf="!isUser">
+            <h1 class="mb-5 text-center">User Login</h1>
+            <div class="row ">
+                <div class="col-4 mb-3">
+                    <label for="email">Email ID</label>
+                </div>
+                <div class="col-8 mb-3">
+                    <input type="text" [(ngModel)]="userDetails.emailId" class="form-control" name="email" id="email">
+                </div>
+                <div class="col-4 mb-3">
+                    <label for="password">Password</label>
+                </div>
+                <div class="col-8 mb-3">
+                    <input type="password" [(ngModel)]="userDetails.password" class="form-control" name="password" id="password">
+                </div>
+                <div class="col-12 mb-3 text-center">
+                    <button class="btn btn-secondary mr-3" (click)="forgot($event)">Forgot Password</button>
+                    <button class="btn btn-primary" (click)="save($event)">Submit</button>
+                </div>
+                <div class="col-12">
+                    <p class="link" (click)="admin()"><u>If you are Admin?</u></p>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,70 @@
+<div class="row mt-5">
+    <div class="col-md-3 col-sm-12 mb-4 ">
+
+    </div>
+    <div class="col-md-6 col-sm-12 mt-5 box mb-4">
+        <h1 class="mb-5 text-center">3. Employment Details</h1>
+        <form>
+            <div class="row ">
+                <div class="col-4 mb-3">
+                    <label for="employment-details">Type of Employment</label>
+                </div>
+                <div class="col-8 mb-3">
+                    <select class="form-control" name="employment-details" id="employment-details" [(ngModel)] = "employment.typeOfEmployement">
+                        <option value="salaried">Salaried</option>
+                        <option value="selef_employed">Self Employed</option>
+                    </select>
+                </div>
+                <div class="col-4 mb-3">
+                    <label for="retirement-age">Retirement age</label>
+                </div>
+                <div class="col-8 mb-3">
+                    <input type="text" class="form-control" name="retirement-age" id="retirement-age"  [(ngModel)] = "employment.retirementAge" maxlength="2" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
+                </div>
+                <div class="col-4 mb-3">
+                    <label for="work-experience">Work Experience</label>
+                </div>
+                <div class="col-8 mb-3">
+                    <input type="text" class="form-control" name="work-experience" id="work-experience"  [(ngModel)] = "employment.workExperience" maxlength="2" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
+                </div>
+                <div class="col-4 mb-3">
+                    <label for="organizaton-type">Organization Type</label>
+                </div>
+                <div class="col-8 mb-3">
+                    <input type="text" class="form-control" name="organizaton-type" id="organizaton-type" [(ngModel)] = "employment.organizationType">
+                </div>
+                <div class="col-4 mb-3">
+                    <label for="employer-name">Employer Name</label>
+                </div>
+                <div class="col-8 mb-3">
+                    <input type="text" class="form-control" name="employer-name" id="employer-name" [(ngModel)] = "employment.employerName">
+                </div>
+                <div class="col-4 mb-3">
+                    <label for="income-pat">Income/PAT</label>
+                </div>
+                <div class="col-8 mb-3">
+                    <input type="number" class="form-control" name="income-pat" id="income-pat"  [(ngModel)] = "employment.incomePat" >
+                </div>
+                <div class="col-4 mb-3">
+                    <label for="incomefromothersources">Income From Other Sources</label>
+                </div>
+                <div class="col-8 mb-3">
+                    <input type="text" class="form-control" name="incomefromothersources" id="incomefromothersources"  [(ngModel)] = "employment.incomeFromOtherSources">
+                </div>
+                <div class="col-4 mb-3">
+                    <label for="netmonthlyincome">Net Monthly Income</label>
+                </div>
+                <div class="col-8 mb-3">
+                    <input type="text" class="form-control" name="netmonthlyincome" id="netmonthlyincome" [(ngModel)] = "employment.netMonthlyIncome">
+                </div>
+                <div class="col-12 mb-3 text-center">
+                    <button class="btn btn-secondary mr-3" (click)="back()">Back</button>
+                    <button class="btn btn-primary" (click)="clicked()">Next</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="col-md-3 col-sm-12 mb-4 ">
+
+    </div>
+</div>

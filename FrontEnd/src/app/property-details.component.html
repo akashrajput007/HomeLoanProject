@@ -1,0 +1,37 @@
+<div class="row mt-5">
+    <div class="col-md-3 col-sm-12 mt-5 mb-4 ">
+
+    </div>
+    <div class="col-md-6 col-sm-12 mt-5 box mb-4">
+        <h1 class="mb-5 text-center">4. Property Details</h1>
+        <form>
+            <div class="row ">
+                <div class="col-4 mb-3">
+                    <label for="property-location">Property Location</label>
+                </div>
+                <div class="col-8 mb-3">
+                    <input type="text" class="form-control" name="property-location" id="property-location" [(ngModel)]="property.propertyLocation">
+                </div>
+                <div class="col-4 mb-3">
+                    <label for="property-name">Property Name</label>
+                </div>
+                <div class="col-8 mb-3">
+                    <input type="text" class="form-control" name="property-name" id="property-name" [(ngModel)]="property.propertyName">
+                </div>
+                <div class="col-4 mb-3">
+                    <label for="estimate-amount">Estimated Amount</label>
+                </div>
+                <div class="col-8 mb-3">
+                    <input type="text" class="form-control" name="estimate-amount" id="estimate-amount" [(ngModel)]="property.cost" maxlength="10" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
+                </div>
+                <div class="col-12 mb-3 text-center">
+                    <button class="btn btn-secondary mr-3" type = "button" (click)="back()">Back</button>
+                    <button class="btn btn-primary" type = "button" (click)="clicked()">Next</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="col-md-3 col-sm-12 mt-5 mb-4 ">
+
+    </div>
+</div>
